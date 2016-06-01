@@ -22,5 +22,6 @@ var judgemsg={
          'phone':false
 
 } ;  
+var i,len=input.length;
 //元素事件
-  for(var i = 0;i
+  for(i=0;i
