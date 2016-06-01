@@ -4,23 +4,23 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>my first blog | Hexo</title>
+    <title>Hexo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="John Doe">
     
 
     
-    <meta name="description">
+    <meta name="description" content="absolute定位会导致当前块对父级高度和宽度的“塌陷”，因为父级元素不知道absolute子元素的宽高），所以这个元素无法支撑起父元素。而且absolute定位存在兼容性的重灾区：1.absolute定位在IE,7有兼容性问题，需要触发haslayout2.触发完haslayout的快递在IE7下有布局bug3.absolute定位在IE6/7/8下的z-index有兼容性问题。absolut">
 <meta property="og:type" content="article">
-<meta property="og:title" content="my first blog">
-<meta property="og:url" content="http://yoursite.com/2016/05/31/my-first-blog/index.html">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2016/06/01/应避免absolute布局的滥用/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-05-31T11:51:16.000Z">
+<meta property="og:description" content="absolute定位会导致当前块对父级高度和宽度的“塌陷”，因为父级元素不知道absolute子元素的宽高），所以这个元素无法支撑起父元素。而且absolute定位存在兼容性的重灾区：1.absolute定位在IE,7有兼容性问题，需要触发haslayout2.触发完haslayout的快递在IE7下有布局bug3.absolute定位在IE6/7/8下的z-index有兼容性问题。absolut">
+<meta property="og:updated_time" content="2016-06-01T02:06:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="my first blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="absolute定位会导致当前块对父级高度和宽度的“塌陷”，因为父级元素不知道absolute子元素的宽高），所以这个元素无法支撑起父元素。而且absolute定位存在兼容性的重灾区：1.absolute定位在IE,7有兼容性问题，需要触发haslayout2.触发完haslayout的快递在IE7下有布局bug3.absolute定位在IE6/7/8下的z-index有兼容性问题。absolut">
 
     
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -80,14 +80,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/05/31/my-first-blog/" title="my first blog" itemprop="url">my first blog</a>
+      <a href="/2016/06/01/应避免absolute布局的滥用/" title="" itemprop="url"></a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="John Doe" target="_blank" itemprop="author">John Doe</a>
 		
   <p class="article-time">
-    <time datetime="2016-05-31T11:51:16.000Z" itemprop="datePublished"> Published 2016-05-31</time>
+    <time datetime="2016-06-01T02:11:47.722Z" itemprop="datePublished"> Published 2016-06-01</time>
     
   </p>
 </header>
@@ -100,7 +100,10 @@
 		
 		</div>
 		
-		  
+		<p>absolute定位会导致当前块对父级高度和宽度的“塌陷”，因为父级元素不知道absolute子元素的宽高），所以这个元素无法支撑起父元素。<br>而且absolute定位存在兼容性的重灾区：<br>1.absolute定位在IE,7有兼容性问题，需要触发haslayout<br>2.触发完haslayout的快递在IE7下有布局bug<br>3.absolute定位在IE6/7/8下的z-index有兼容性问题。absolute定位需要relative定位做辅助，而造成relative的滥用，也将会使得z-index的bug难以控制。<br>4.absolute定位在IE6/7下对偏移量解析有兼容性bug<br>5.absolute定位在IE6/7下的影响marginzhe折叠bug，以及另外一个影响margin的bug<br>6.absolute定位在IE6下，不指定left/top,出现布局bug<br>7.absolute定位在IE6下的奇偶bug：如果定位外框高度、宽度为奇数，则IE6下，绝对定位的底定位、右定位会有1像素的误差<br>当前跨手机和桌面端的页面，主流的布局方案是弹性布局（流体布局）+media query查询。即：<br><em>弹性自适应布局（宽高设置相对父级的百分比+min-width/max-width)  
+</em>水平方向上的徽派使用float/display-inline-block<br><em>设置视口user-scalable=no  
+</em>针对移动端采用media query 做更细的调节  </p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -112,7 +115,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/05/31/my-first-blog/" data-title="my first blog | Hexo" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/01/应避免absolute布局的滥用/" data-title="Hexo" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -126,13 +129,21 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/01/应避免absolute布局的滥用/" title="">
+ <a href="/2016/06/01/hello-world/" title="Hello World">
   <strong>上一篇：</strong><br/>
   <span>
-  (no title)</span>
+  Hello World</span>
 </a>
 </div>
 
+
+<div class="next">
+<a href="/2016/05/31/my-first-blog/"  title="my first blog">
+ <strong>下一篇：</strong><br/> 
+ <span>my first blog
+</span>
+</a>
+</div>
 
 </nav>
 
