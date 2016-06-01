@@ -79,6 +79,4 @@ switch(elem.id){
    };
    return result;
 }
-//元素事件
-// function focus(){
 	for(var i = 0;i
