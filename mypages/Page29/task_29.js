@@ -79,29 +79,4 @@ switch(elem.id){
    };
    return result;
 }
-for(var i = 0;i<input.length-1;i++){
-	input[i].onfocus = function(i){
-		fcs_marks(this);
-	};
-	input[i].onblur= function(i){
-		blur_marks(this);
-		
-               };
-         };
-         submit.onclick = function(){
-         	console.log(judgemsg);
-         	for(jm in judgemsg){
-                   if(!judgemsg[jm]){
-                        var jmf = jm;
-                         switch(jmf){
-                    	case'nam': alert("名称输入错误，提交失败");break;
-                    	case'psw': alert("密码输入错误，提交失败");break;
-                    	case'cfm': alert("密码输入不一致，提交失败");break;
-                    	case'email': alert("邮箱输入错误，提交失败");break;
-                    	case'phone': alert("手机输入错误，提交失败");break;
-                    }  
-                 } 
-         	}
-           return false;
-         }
-}
+	for(var i = 0;i
