@@ -19,7 +19,7 @@
 <meta property="og:description" content="总结项目中遇到的关于canvas的问题1.drawImage()2.globalAlpha()">
 <meta property="og:image" content="http://i.imgur.com/xiiQibT.png">
 <meta property="og:image" content="http://i.imgur.com/0vG0oQy.png">
-<meta property="og:updated_time" content="2016-06-22T03:55:08.000Z">
+<meta property="og:updated_time" content="2016-06-22T04:04:40.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5_canvas的相关问题">
 <meta name="twitter:description" content="总结项目中遇到的关于canvas的问题1.drawImage()2.globalAlpha()">
@@ -99,12 +99,12 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关与drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关与drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关与局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关与局部透明度的问题</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关于drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关于局部透明度的问题</span></a></li></ol>
 		
 		</div>
 		
 		<p>总结项目中遇到的关于canvas的问题<br>1.drawImage()<br>2.globalAlpha()<br><a id="more"></a></p>
-<h2 id="关与drawImage-图像变形的问题"><a href="#关与drawImage-图像变形的问题" class="headerlink" title="关与drawImage()图像变形的问题"></a>关与drawImage()图像变形的问题</h2><p>需要设置画布大小，canvas中的实际像素跟外边的不一样，要这样设置，不能是通过设置样式而是要这样</p>
+<h2 id="关于drawImage-图像变形的问题"><a href="#关于drawImage-图像变形的问题" class="headerlink" title="关于drawImage()图像变形的问题"></a>关于drawImage()图像变形的问题</h2><p>需要设置画布大小，canvas中的实际像素跟外边的不一样，要这样设置，不能是通过设置样式而是要这样</p>
 <pre><code>&lt;div class=&quot;all_bg&quot;&gt;
    &lt;div id=&quot;allcanvas&quot;&gt;
 &lt;canvas id=&quot;canvas1&quot; width=&quot;800px&quot; height=&quot;600px&quot;&gt;&lt;/canvas&gt;
@@ -119,7 +119,7 @@
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre><p>实际宽高和样式宽高不一致就会拉伸了<br><img src="http://i.imgur.com/0vG0oQy.png" alt=""></p>
-<h2 id="关与局部透明度的问题"><a href="#关与局部透明度的问题" class="headerlink" title="关与局部透明度的问题"></a>关与局部透明度的问题</h2><pre><code>aneObject.prototype.draw = function()
+<h2 id="关于局部透明度的问题"><a href="#关于局部透明度的问题" class="headerlink" title="关于局部透明度的问题"></a>关于局部透明度的问题</h2><pre><code>aneObject.prototype.draw = function()
 {
   ctx2.save();
   ctx2.lineWidth = &apos;20&apos;;
@@ -187,7 +187,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关与drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关与drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关与局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关与局部透明度的问题</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关于drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关于局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关于局部透明度的问题</span></a></li></ol>
  
   </div>
 
