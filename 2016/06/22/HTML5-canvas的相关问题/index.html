@@ -4,23 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>BAIDU | 双木荼的博客</title>
+    <title>HTML5_canvas的相关问题 | 双木荼的博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="双木荼">
     
 
     
-    <meta name="description" content="行星与飞船常见的技术产品官网的页面架构及样式布局移动Web页面布局实践城市空气粒度多个表单项的动态校验使用BootStrap,CSS,HTML实现复杂页面">
+    <meta name="description" content="总结项目中遇到的关于canvas的问题1.drawImage()2.globalAlpha()">
 <meta property="og:type" content="article">
-<meta property="og:title" content="BAIDU">
-<meta property="og:url" content="http://yoursite.com/2016/06/05/BAIDU/index.html">
+<meta property="og:title" content="HTML5_canvas的相关问题">
+<meta property="og:url" content="http://yoursite.com/2016/06/22/HTML5-canvas的相关问题/index.html">
 <meta property="og:site_name" content="双木荼的博客">
-<meta property="og:description" content="行星与飞船常见的技术产品官网的页面架构及样式布局移动Web页面布局实践城市空气粒度多个表单项的动态校验使用BootStrap,CSS,HTML实现复杂页面">
-<meta property="og:updated_time" content="2016-06-05T08:30:56.000Z">
+<meta property="og:description" content="总结项目中遇到的关于canvas的问题1.drawImage()2.globalAlpha()">
+<meta property="og:image" content="http://i.imgur.com/xiiQibT.png">
+<meta property="og:image" content="http://i.imgur.com/0vG0oQy.png">
+<meta property="og:updated_time" content="2016-06-22T03:55:08.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BAIDU">
-<meta name="twitter:description" content="行星与飞船常见的技术产品官网的页面架构及样式布局移动Web页面布局实践城市空气粒度多个表单项的动态校验使用BootStrap,CSS,HTML实现复杂页面">
+<meta name="twitter:title" content="HTML5_canvas的相关问题">
+<meta name="twitter:description" content="总结项目中遇到的关于canvas的问题1.drawImage()2.globalAlpha()">
+<meta name="twitter:image" content="http://i.imgur.com/xiiQibT.png">
 
     
     <link rel="alternative" href="/atom.xml" title="双木荼的博客" type="application/atom+xml">
@@ -80,14 +83,14 @@
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/06/05/BAIDU/" title="BAIDU" itemprop="url">BAIDU</a>
+      <a href="/2016/06/22/HTML5-canvas的相关问题/" title="HTML5_canvas的相关问题" itemprop="url">HTML5_canvas的相关问题</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="双木荼" target="_blank" itemprop="author">双木荼</a>
 		
   <p class="article-time">
-    <time datetime="2016-06-05T00:35:58.000Z" itemprop="datePublished"> 发表于 2016-06-05</time>
+    <time datetime="2016-06-22T03:52:56.000Z" itemprop="datePublished"> 发表于 2016-06-22</time>
     
   </p>
 </header>
@@ -96,11 +99,43 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">行星与飞船</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">常见的技术产品官网的页面架构及样式布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">移动Web页面布局实践</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">城市空气粒度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">多个表单项的动态校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">使用BootStrap,CSS,HTML实现复杂页面</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关与drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关与drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关与局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关与局部透明度的问题</span></a></li></ol>
 		
 		</div>
 		
-		<h3><a href="/mypages/Page26/page26.html">行星与飞船</a></h3><br><h3><a href="/mypages/Page7/page7.html">常见的技术产品官网的页面架构及样式布局</a></h3><br><h3><a href="/mypages/Page11/page11.html">移动Web页面布局实践</a></h3><br><h3><a href="/mypages/Page17/page17.html">城市空气粒度</a></h3><br><h3><a href="/mypages/Page29/page29.html">多个表单项的动态校验</a></h3><br><h3><a href="/mypages/BTPage9/page9.html">使用BootStrap,CSS,HTML实现复杂页面</a></h3>  
+		<p>总结项目中遇到的关于canvas的问题<br>1.drawImage()<br>2.globalAlpha()<br><a id="more"></a></p>
+<h2 id="关与drawImage-图像变形的问题"><a href="#关与drawImage-图像变形的问题" class="headerlink" title="关与drawImage()图像变形的问题"></a>关与drawImage()图像变形的问题</h2><p>需要设置画布大小，canvas中的实际像素跟外边的不一样，要这样设置，不能是通过设置样式而是要这样</p>
+<pre><code>&lt;div class=&quot;all_bg&quot;&gt;
+   &lt;div id=&quot;allcanvas&quot;&gt;
+&lt;canvas id=&quot;canvas1&quot; width=&quot;800px&quot; height=&quot;600px&quot;&gt;&lt;/canvas&gt;
+&lt;canvas id=&quot;canvas2&quot; width=&quot;800px&quot; height=&quot;600px&quot;&gt;&lt;/canvas&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p><img src="http://i.imgur.com/xiiQibT.png" alt=""><br>否则默认是 300－150<br>样式里面的宽高代表渲染大小</p>
+<pre><code>&lt;div class=&quot;all_bg&quot;&gt;
+   &lt;div id=&quot;allcanvas&quot;&gt;
+&lt;canvas id=&quot;canvas1&quot; style=&quot;width: 800px; height:600px&quot;&gt;&lt;/canvas&gt;
+&lt;canvas id=&quot;canvas2&quot; style=&quot;width: 800px; height:600px&quot;&gt;&lt;/canvas&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre><p>实际宽高和样式宽高不一致就会拉伸了<br><img src="http://i.imgur.com/0vG0oQy.png" alt=""></p>
+<h2 id="关与局部透明度的问题"><a href="#关与局部透明度的问题" class="headerlink" title="关与局部透明度的问题"></a>关与局部透明度的问题</h2><pre><code>aneObject.prototype.draw = function()
+{
+  ctx2.save();
+  ctx2.lineWidth = &apos;20&apos;;
+  ctx2.lineCap = &quot;round&quot;;
+  ctx2.strokeStyle = &quot;#3b154e&quot;;
+  ctx2.globalAlpha = 0.6;
+  for(var i=0;i&lt;this.num;i++){
+  ctx2.beginPath(); 
+  ctx2.moveTo(this.x[i],can_height);
+  ctx2.lineTo(this.x[i],can_height-this.len[i]);
+  ctx2.stroke();
+}
+  ctx2.restore();
+}
+</code></pre><p>globalAlpha是一个全局的，但是只要他出现在restore()与save()之间,它便只作用于这两个之间</p>
+  
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
@@ -112,7 +147,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/06/05/BAIDU/" data-title="BAIDU | 双木荼的博客" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/06/22/HTML5-canvas的相关问题/" data-title="HTML5_canvas的相关问题 | 双木荼的博客" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -126,18 +161,18 @@
 <nav class="article-nav clearfix">
  
  <div class="prev" >
- <a href="/2016/06/22/HTML5-canvas的相关问题/" title="HTML5_canvas的相关问题">
+ <a href="/2016/06/22/hello-world/" title="Hello World">
   <strong>上一篇：</strong><br/>
   <span>
-  HTML5_canvas的相关问题</span>
+  Hello World</span>
 </a>
 </div>
 
 
 <div class="next">
-<a href="/2016/06/03/百度前端学院任务/"  title="百度前端学院任务">
+<a href="/2016/06/05/BAIDU/"  title="BAIDU">
  <strong>下一篇：</strong><br/> 
- <span>百度前端学院任务
+ <span>BAIDU
 </span>
 </a>
 </div>
@@ -152,7 +187,7 @@
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">1.</span> <span class="toc-text">行星与飞船</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">2.</span> <span class="toc-text">常见的技术产品官网的页面架构及样式布局</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">3.</span> <span class="toc-text">移动Web页面布局实践</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">4.</span> <span class="toc-text">城市空气粒度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">5.</span> <span class="toc-text">多个表单项的动态校验</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#undefined"><span class="toc-number">6.</span> <span class="toc-text">使用BootStrap,CSS,HTML实现复杂页面</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关与drawImage-图像变形的问题"><span class="toc-number">1.</span> <span class="toc-text">关与drawImage()图像变形的问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#关与局部透明度的问题"><span class="toc-number">2.</span> <span class="toc-text">关与局部透明度的问题</span></a></li></ol>
  
   </div>
 
