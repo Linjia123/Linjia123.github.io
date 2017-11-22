@@ -1,0 +1,132 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-04-19 23:19:03
+ * @version $Id$
+ */
+*{
+	font-family: 微软雅黑;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+fieldset{
+	width: 1200px;
+	margin: 0 auto;
+	border-radius: 15px;
+	padding: 10px;
+}
+.grade{
+	float: left;
+	margin-left: 100px;
+}
+.select{
+	float: left;
+	margin-left: 100px;
+}
+#city-select{
+	box-sizing: border-box;
+	-webkit-appearance:none;
+	appearance:none;
+	background-color: #ffffff;
+	outline: none;
+	width: 110px;
+	line-height: 25px;
+	margin-top: 10px;
+	/*padding: 0 30px;*/
+	font-size:  .75rem;
+	text-align: center;
+	letter-spacing: 10px;
+}
+
+#aqi-chart-wrap{
+	position: relative;
+	width: 1200px;
+	height: 600px;
+	margin: 50px auto;
+	box-shadow: 0px 0px 5px #999999;
+	border-radius: 15px;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+#aqi-chart-wrap>div{
+	position: absolute;
+	height: 200px;
+	bottom:0px;	
+	display: inline-block;
+	animation:myfirst 0.8s;
+	box-shadow: 3px -3px 3px #696969;
+	/*background-image: -webkit-linear-gradient(red, yellow 40%, green 20%);*/
+}
+  @keyframes myfirst 
+        {
+             0% {bottom: -300px;}*//*初始状态 透明度为0  
+           /* 40% {opacity: 0.5;}*//*过渡状态 透明度为0*/  
+         100% {bottom:0 }
+        /*0%{transform:translate3d(0,-100%,0);}
+        100%{transform:translate3d(0,100%,0);}*/
+        
+        }
+
+#aqi-chart-wrap>div span
+{
+	font-size: 12px;
+             line-height: 12px;
+             text-align: center;
+             width: 100px;
+             float: left;
+             margin-top: -80px;
+             margin-left: -45px;
+             visibility: hidden;
+}
+#aqi-chart-wrap>div:hover span{
+	visibility: visible;
+}
+/*.aqi-bar{
+	position: absolute;
+	bottom: 0;
+	cursor: pointer;
+	animation: heightAnim .5s ease-in-out;
+
+}*/
+label {
+	position: relative;
+	border:1px solid #483d8b;
+	border-radius: 25px;
+	/*appearance:none;*/
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	margin-right: 10px;
+	cursor: pointer;
+
+}
+label span{
+	display: block;
+	position: absolute;
+	top:16px;
+	left: 16px;
+	text-align: center;
+	vertical-align: center;
+	height: 100%;
+	line-height:100%;
+	/*border:1px solid #16324a;*/
+	/*border-radius: 50%;*/
+	
+}
+label input{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	visibility: hidden;
+
+	/*background-color: red;*/
+	/*opacity: 0;
+*/
+}
+/*.selected {
+	background-color: #16324a;
+	color: white;
+}*/
