@@ -1,0 +1,264 @@
+<!-- !DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/dialog.css">
+    <script src="js/mobileUtil.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+     金额头部 -->
+    <!-- <div class="wrap">  -->
+        <!-- 头部说明 -->
+        <!-- <div class="head-explain">
+            <h1>归还流程</h1>
+            <ul>
+                <li>1.充电宝交还店员</li>
+                <li>2.向店员索取智小宝密码卡</li>
+                <li>3.刮开密码层，扫码完成操作</li>
+            </ul>
+        </div> -->
+        <!-- 指引图片 -->
+        <!-- <div class="guide-img">
+            <img src="../img/borrow_guide.png">
+        </div> -->
+        <!-- <div class="money-hd">
+            <p>您当前押金余额</p>
+            <h1>¥0.00</h1>
+            <p>需充值</p>
+        </div> -->
+        <!-- <div class="money-hd money-hd-1">
+            <p>您当前押金余额</p>
+            <h1>¥0.00</h1>
+            <p>提现进度（预计0-5个工作日到账）</p>
+        </div> -->
+        <!-- 弹框 -->
+        <!-- <div class="dialog">
+            <div class="overlay"></div>
+            <div class="dialogwrap">
+                <div class="dialogbody">
+                    <div class="dialog-ask">
+                        <div class="dialog-msg">
+                            您有待归还的订单，请先归还充电宝！
+                        </div>
+                        <div class="closedialog">确定</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog">
+            <div class="overlay"></div>
+            <div class="dialogwrap">
+                <div class="dialogbody">
+                    <div class="dialog-ask">
+                        <div class="dialog-msg">
+                            余额提现时间为0-5个工作日，在此期间您的账号将无法使用租借充电宝功能，是否确认提现？
+                        </div>
+                        <div class="closedialog">
+                            <div class="cancal">取消</div>
+                            <div>确认提现</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- 按钮 -->
+        <!-- <div class="btn">
+            借充电宝
+        </div>
+        <div class="btn btn-1">
+            借充电宝
+        </div>
+        <div class="btn btn-2">
+            借充电宝
+        </div> -->
+        <!-- 租借说明 -->
+        <!-- <p class="explain">4小时免费，超过4小时，每天1元</p>
+        <p class="explain">扫描不成功？试试<span>直接输入扫码</span></p> -->
+        <!-- 输入框 -->
+       <!--  <div class="input1">
+            <input type="text" placeholder="请输入10位密码">
+            <div class="button">按钮</div>
+        </div> -->
+        <!-- 底部说明 -->
+        <!-- <ul class="bottom-explain">
+            <li>1.首次租借需要充值X元押金，当前您的押金余额小于Y元且再次租借时，需要再次将押金充值到X元</li>
+            <li>2.充电宝归还后，您的账户中的押金余额可以随时提现</li>
+        </ul>
+    </div> -->
+    <!-- 订单详情 -->
+   <!--  <div class="wrap">
+        <div class="content">
+            <div class="ticket">
+                <div class="ticket-header">
+                    <p><img src="../img/ok.png" alt=""></p>
+                    <h2>租借电源成功</h2>
+                </div>
+                <div class="ticket-details">
+                    <div class="ticket-title"><h3><span>租借详情</span></h3></div>
+                    <ul class="ticket-msg" id="ticket_msg">
+                    <li><div>租借时间</div><div>2016年11月01日11:10:10</div></li>
+                    <li><div>租借地点</div><div class="font-orienge">广州市天河区花城汇电影院收银台旁</div></li>
+                    <li><div>接口类型</div><div>苹果Lighting</div></li>
+                    <li><div>订单号</div><div>1477969810613838</div></li>
+                    <li><div>BOX编号</div><div>3829111</div></li>
+                    <li><div>收费标准</div><div>1小时内免费，逾期2元/天</div></li>
+                    <li><div>归还期限</div><div>2016年11月22日11:10:10</div></li>
+                    </ul>
+                </div>
+                <div class="ticket-footer"></div>
+            </div>
+        </div>
+    </div>
+     跳过页面 -->
+    <!-- <div class="jump">
+        <p>
+            <input type="checkbox" id="checkbox_a1" class="chk_1" />
+            <label for="checkbox_a1"></label>下次跳过该页面，直接扫二维码
+        </p>
+    </div> -->
+  <!--   </div>
+</body>
+
+</html> -->
+<!-- <script src="js/zepto.js"></script> -->
+<!-- <script src="js/dialog.js"></script> -->
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="app">
+
+        <p>{{position|json}}</p>
+
+        <div class="input-group">
+            <input type="text" class="form-control" v-model="q" @keyup.enter="search(q)" placeholder="Search for...">
+            <span class="input-group-btn">
+                <a class="btn btn-default" @click="search(q)">Go!</a>
+            </span>
+        </div><!-- /input-group -->
+        <br />
+        <gd-map @map-click="map_click" :position.once="position" style="height:600px;"></gd-map>
+    </div>
+
+    <template id="map_modal">
+        <modal :show.sync="show">
+            <div slot="modal-header" class="modal-header">
+                <h4 class="modal-title">选择坐标</h4>
+            </div>
+            <div slot="modal-body" class="modal-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" v-model="q" @keyup.enter="search(q)" placeholder="Search for...">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default" @click="search(q)">Go!</a>
+                    </span>
+                </div>
+                <br />
+                <gd-map @map-click="map_click" :position.once="position" :style='{ height:"400px", }'></gd-map>
+            </div>
+            <div slot="modal-footer" class="modal-footer">
+                <button type="button" class="btn btn-default" @click='cancel()'>取消</button>
+                <button type="button" class="btn btn-success" @click='submit()'>确定</button>
+            </div>
+        </modal>
+    </template>
+
+    <!-- <script src="http://webapi.amap.com/maps?v=1.3&key=bfe31f4e0fb231d29e1d3ce951e2c780&callback=initTheMap"></script> -->
+
+    <script src="https://webapi.amap.com/maps?v=1.3&key=76f167aa351abefe78920b55777f9be6"></script>
+
+    <script src="js/vue.js"></script>
+    <script src="http://cdn.bootcss.com/vue-strap/1.0.11/vue-strap.min.js"></script>
+
+    <script>
+        'use strict';
+
+        Vue.component('gdMap', {
+            props: ['position'],
+            template: '<div></div>',
+            replace: true,
+            ready() {
+                this.map = new AMap.Map(this.$el, {
+                    resizeEnable: true,
+                    zoom: 12,
+                })
+
+                var self = this
+
+                if (this.position.lng && this.position.lat) {
+                    var center = [this.position.lng, this.position.lat]
+                    this.map.setCenter(center)
+                    this.marker = new AMap.Marker({ map: self.map })
+                    this.marker.setPosition(center)
+                }
+
+                this.map.on('click', function (e) {
+                    self.$dispatch('map-click', e)
+
+                    if (!self.marker) {
+                        self.marker = new AMap.Marker({ map: self.map })
+                    }
+
+                    self.marker.setPosition([e.lnglat.getLng(), e.lnglat.getLat()])
+                })
+            },
+            events: {
+                'setCenter'(center) {
+                    if (!this.map) return
+                    this.map.setCenter(center)
+                },
+            },
+        })
+
+        new Vue({
+            el: '#app',
+            data: function () {
+                return {
+                    q: null,
+                    position: {}
+                }
+            },
+            methods: {
+                search(q) {
+                    var self = this
+
+                    AMap.service(["AMap.PlaceSearch"], function () {
+                        var placeSearch = new AMap.PlaceSearch({ //构造地点查询类
+                            pageSize: 1,
+                            pageIndex: 1,
+                            //city: "010", //城市
+                            //map: self.map,
+                            //panel: "panel"
+                        })
+
+                        //关键字查询
+                        placeSearch.search(q, function (status, result) {
+                            //TODO : 按照自己需求处理查询结果
+                            var poiList = result.poiList
+
+                            if (poiList.count > 0) {
+                                var p = poiList.pois[0]
+                                self.$broadcast('setCenter', [p.location.lng, p.location.lat])
+                            }
+                        })
+                    })
+                },
+                map_click (e) {
+                    this.$set('position.lat', e.lnglat.getLat())
+                    this.$set('position.lng', e.lnglat.getLng())
+                }
+            },
+            components: {
+                modal: VueStrap.modal
+            }
+        })
+
+    </script>
+
+</body>
+</html>

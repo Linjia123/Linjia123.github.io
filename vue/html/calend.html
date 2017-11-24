@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>日历</title>
+	<link rel="stylesheet" href="css/calendar.css">
+	<script src="js/vue.js"></script>
+</head>
+<body>
+	<div id="app" v-cloak>
+		 <!-- 日历 -->
+        <div class="calendarBox calendarBox_show calendarBox_transform_none" v-show="showCalendar">
+            <header class="bar bar-nav">
+                <button class="button button-link button-nav pull-left"> <i class="iconfont icon-login back" @click="showCalendar=false"></i> </button>
+                <h1 class="title">选择消费日期</h1>
+            </header>
+            <div class="weekBox"> <span class="weekend">日</span> <span class="">一</span> <span class="">二</span> <span class="">三</span> <span class="">四</span> <span class="">五</span> <span class="weekend">六</span></div>
+            <div class="calendarBox_c">
+                <div class="monthBox" v-for="item in calender">
+                    <div class="t">{{item.month}}</div>
+                    <ul class="bd-calendar-body">
+                        <li v-for="day in item.day" class="dayDate" :class="{ 'select':day.select,'today':day.today,'nodata':!day.active}" date="{{day.date}}" @click="selectDate(day)"><span class="daynum">{{day.num}}</span><span class="dayprice">{{day.msg}}</span><i></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="calend-botton">
+                <div class="cancel" @click="showCalendar = false">取消</div>
+                <div class="confirm" @click="confirm">确认</div>
+            </div>
+        </div>
+	</div>
+</body>
+<script src="js/zepto.js"></script>
+<script src="js/vue.js"></script>
+<script src="js/calendar.js"></script>
+</html>

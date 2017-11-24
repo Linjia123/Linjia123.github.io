@@ -1,0 +1,90 @@
+.btitle {
+  height: 0.842rem;
+  line-height: 0.842rem;
+  text-align: center;
+  font-size: 1.125em;
+}
+
+.btitle span {
+  font-size: 0.75em;
+  color: #666666;
+}
+
+.tab-menu {
+  margin-bottom: 0.395rem;
+  border: 0.026rem solid #eeeeee;
+}
+
+.tab-menu a {
+  float: left;
+  height: 1.053rem;
+  line-height: 1.053rem;
+  text-align: center;
+  font-size: 1em;
+  background-color: #eeeeee;
+  position: relative;
+}
+
+.tab-menu a.cur {
+  color: #e98100;
+  background-color: #ffffff;
+}
+
+.tab-menu.t2 a {
+  width: 50%;
+}
+
+.blist li {
+  position: relative;
+  border-bottom: 0.026rem dashed #dddddd;
+  padding: 0.263rem 0;
+}
+
+.blist span {
+  height: 0.947rem;
+  line-height: 0.947rem;
+}
+
+.pages {
+  margin-top: 0.395rem;
+  text-align: center;
+  height: 1.053rem;
+  line-height: 1.053rem;
+}
+
+.pages p {
+  font-size: 0.421rem;
+  position: relative;
+}
+
+.pages span {
+  margin-right: 0.132rem;
+}
+
+.pages a {
+  color: #333333;
+  background-color: #eeeeee;
+}
+
+.pages .page_num .m_s {
+  width: 45%;
+  padding: 0.079rem 0.263rem;
+  border-radius: 0.105rem;
+  text-align: center;
+  font-size: 1.25em;
+}
+
+.pages .page_prev {
+  position: absolute;
+  top: 0;
+  width: 70px;
+  height: 40px;
+}
+
+.pages .page_next {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70px;
+  height: 40px;
+}

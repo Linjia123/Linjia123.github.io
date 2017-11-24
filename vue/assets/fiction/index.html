@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>简明小说</title>
+    <link rel="stylesheet" href="../css/fiction/base.css">
+    <link rel="stylesheet" href="/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../css/fiction/index.css">
+    <script src="../js/mobileUtil.js"></script>
+    <script src="../js/zepto.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <span class="nav_left">
+            <a href="javascript:history.go(-1)">
+                返回
+            </a>
+        </span>
+        <span class="nav_right">
+            <a rel="internal" href="classify.html">
+                    分类
+            </a>
+        </span>
+        <h1>
+                首页
+        </h1>
+    </div>
+    <div class="wrap">
+        <div id="slide">
+            <div class="slide-show" @mouseover="clearInv" @mouseout="runInv">
+                <div class="slide-img">
+                    <a :href="slides[nowIndex].href">
+                        <transition name="slide-trans">
+                            <img v-if="isShow" :src="slides[nowIndex].src">
+                        </transition>
+                        <transition name="slide-trans-old">
+                            <img v-if="!isShow" :src="slides[nowIndex].src">
+                        </transition>
+                    </a>
+                </div>
+                <ul class="slide-pages">
+                    <li v-for="(item, index) in slides" @click="goto(index)">
+                        <a :class="{on: index === nowIndex}" :data-index="index"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="block1">
+            <p class="title">最新小说<a href="#" class="move ui-link">更多</a></p>
+            <ul class="fiction-list">
+                <li>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow img1"><img src="/fiction_img/fiction_1.jpg"><p>某某小说</p></a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow img1"><img src="/fiction_img/fiction_1.jpg"><p>某某小说</p></a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow img1"><img src="/fiction_img/fiction_1.jpg"><p>某某小说</p></a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow img1"><img src="/fiction_img/fiction_1.jpg"><p>某某小说</p></a>
+                </li>
+                <li>
+                    <a href="#" class="ui-btn ui-corner-all ui-shadow img1"><img src="/fiction_img/fiction_1.jpg"><p>某某小说</p></a>
+                </li>
+            </ul>
+        </div>
+        <div class="block2">
+            <p class="title"><a href="#">完本精选</a></p>
+            <div class="content">
+                <a href="#" class="content-center">
+                    <div class="display-left"><img src="/fiction_img/fiction_1.jpg"></div>
+                    <div class="display-right">
+                        <h2>某某小说</h2>
+                        <p>介绍：国内各大小说站合作,为小说爱好者提供更多更全的为小说爱好者提供更多更全的</p>
+                        <p>阅读数：123万</p>
+                    </div>
+                </a>
+                <ul class="other-list">
+                    <li><a href="#" class="ui-link"><span>都市</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                    <li><a href="#" class="ui-link"><span>历史</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                    <li><a href="#" class="ui-link"><span>玄幻</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                    <li><a href="#" class="ui-link"><span>奇幻</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                    <li><a href="#" class="ui-link"><span>武侠</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                    <li><a href="#" class="ui-link"><span>仙侠</span>国内各大小说站合作,为小说爱好者提供更多更全的</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/vue.js"></script>
+<script src="../js/fiction/index.js"></script>
+
+</html>

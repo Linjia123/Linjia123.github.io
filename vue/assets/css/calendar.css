@@ -1,0 +1,100 @@
+.bd-calendar-body ul {
+  clear: both;
+}
+
+.bd-calendar-body li {
+  border-right: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 2.25rem;
+  width: 14.28571%;
+  line-height: 2.25rem;
+  border-top: 1px solid #ddd;
+  float: left;
+}
+
+.calendarBox .calendarBox_c .monthBox:last-child {
+  margin-bottom: 1.316rem;
+}
+
+.calendarBox .calendarBox_c .monthBox {
+  float: left;
+}
+
+.bd-calendar-body li .daynum {
+  display: block;
+}
+
+.bd-calendar-body li .dayprice {
+  display: block;
+  line-height: 16px;
+}
+
+.bd-calendar-body li:nth-child(7n+7) .daynum {
+  color: #1d8dff;
+}
+
+.bd-calendar-body li:nth-child(7n+1) .daynum {
+  color: #1d8dff;
+}
+
+.bd-calendar-body li .today {
+  color: #48cc4f;
+}
+
+.bd-calendar-body .select {
+  background: #1d8dff;
+  color: #fff;
+  line-height: 1.14rem;
+}
+
+.bd-calendar-body .select:nth-child(7n+7) .daynum {
+  color: #fff;
+}
+
+.bd-calendar-body .select:nth-child(7n+1) .daynum {
+  color: #fff;
+}
+
+.bd-calendar-body .nodata {
+  color: #dee3e2;
+  background-color: #fff;
+}
+
+.bd-calendar-body .nodata:nth-child(7n+7) .daynum {
+  color: #dee3e2;
+  background-color: #fff;
+}
+
+.bd-calendar-body .nodata:nth-child(7n+1) .daynum {
+  color: #dee3e2;
+  background-color: #fff;
+}
+
+.calend-botton {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 -2px 8px #dee3e2;
+}
+
+.calend-botton .cancel {
+  width: 50%;
+  float: left;
+  line-height: 2.368rem;
+  height: 2.368rem;
+  border-right: 1px solid #dee3e2;
+}
+
+.calend-botton .confirm {
+  width: 50%;
+  float: left;
+  color: #1d8dff;
+  line-height: 2.368rem;
+  height: 2.368rem;
+}
