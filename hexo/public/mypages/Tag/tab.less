@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2016-07-26 13:31:54
+ * @version $Id$
+ */
+
+@mycolor: #0072BC;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.control {
+    height: 60px;
+    width: 800px;
+    padding: 20px;
+    margin: 10px auto;
+    clear: borth;
+}
+
+.event {
+    float: left;
+    height: 30px;
+    width: 200px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    option {
+        background: transparent;
+        height: 100%;
+        text-align: center;
+        line-height: 30px;
+        color: @mycolor;
+    }
+    option[selected] {
+        background-color: @mycolor;
+        color: #fff;
+    }
+}
+
+.ok_btn {
+    float: left;
+    margin-left: 10px;
+    height: 30px;
+    width: 100px;
+    font-size: 25px;
+    border: 1px solid #ccc;
+    text-align: center;
+    line-height: 30px;
+    color: @mycolor;
+    background-color: #fff;
+}
+
+.ok_btn:active {
+    background-color: @mycolor;
+    color: #fff;
+}
+
+.tab {
+    width: 800px;
+    height: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    position: relative;
+    .tab-btn {
+        list-style: none;
+        width: 100%;
+        height: 10%;
+        border-radius: 5px 5px 0 0;
+        margin-bottom: -1px;
+        overflow:hidden;
+        z-index: 2;
+        // border-bottom: 1px solid #ccc;
+        >li {
+            font-size: 22px;
+            display: inline-block;
+            font-family: 微软雅黑;
+            color: #fff;
+            cursor: pointer;
+            padding: 1% 2%;
+            background-color: @mycolor;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            margin-bottom: -1px;
+        }
+        .tab_active {
+            background-color: #fff;
+            z-index: 1;
+            color: @mycolor;
+            position: relative;
+            border: 1px solid #ccc;
+            border-bottom-color: transparent;
+        }
+    }
+    .tab-content {
+        border: 1px solid #ccc;
+        // border-top: none;
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+        text-align: center;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 4px 4px 4px #ccc;
+        .tab-mod {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            font-size: 16px;
+            padding: 20px;
+            display: none;
+        }
+        .tab_visited {
+            display: block;
+        }
+    }
+}
+
+.my_tab {
+    .my_btn {
+        li {
+            background-color: #DC7D4C;
+        }
+        li:hover {
+        	font-size: 26px;
+        }
+        .tab_active {
+            color: #DC7D4C;
+        }
+    }
+    .my_content {
+        p {
+            font-size: 26px;
+            font-family: 微软雅黑;
+            color: #DC7D4C;
+            line-height: 36px;
+        }
+    }
+}

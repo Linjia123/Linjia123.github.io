@@ -1,0 +1,87 @@
+.btitle {
+    height: 0.842rem;
+    line-height: 0.842rem;
+    text-align: center;
+    font-size: 1.125em;
+    span {
+        font-size: 0.75em;
+        color: #666666;
+    }
+}
+
+.bintro {
+    overflow: hidden;
+    p {
+        color: #666666;
+        line-height: 0.632rem;
+        font-size: .875em;
+        max-height: 1.895rem;
+        word-wrap: break-word;
+        word-break: break-all;
+        overflow: hidden;
+    }
+}
+
+.bindex {
+    .blist {
+        font-size: .875em;
+        line-height: 0.579rem;
+        li {
+            position: relative;
+            border-bottom: 0.026rem dashed #dddddd;
+            padding: 0.263rem 0;
+            height: auto;
+        }
+        .bintro p {
+            color: #111111;
+            line-height: 0.5rem;
+            max-height: 2.895rem;
+        }
+        .tname a {
+            display: inline-block;
+        }
+    }
+}
+
+.bname,
+.tname {
+    width: 100%;
+    word-wrap: break-word;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.blink {
+    a {
+        float: left;
+        line-height: 0.947rem;
+        text-align: center;
+    }
+    a.cur {
+        color: #ffffff;
+        background-color: #e98213;
+    }
+    .last {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+.blink.gyb {
+    a {
+        background-color: #eeeeee;
+    }
+    a.cur {
+        color: #ffffff;
+        background-color: #e98213;
+    }
+    .last {
+        float: right;
+        margin-right: 0;
+    }
+}
+
+.blink.bl3 a {
+    width: 30%;
+    margin-right: 5%;
+}

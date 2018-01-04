@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>手机端常用组件</title>
+    <link rel="stylesheet" href="css/element.css">
+    <script src="js/mobileUtil.js"></script>
+    <script src="js/vue.js"></script>
+</head>
+
+<body>
+    <div id="element" v-cloak>
+        <ul class="menu">
+            <li><input type="text" v-model="toast.msg" placeholder="请输入文案"><button @click="showToast(toast.msg)">显示Toast</button></li>
+            <li><button @click="showLoading">显示Loading</button></li>
+            <li><input type="text" v-model="name" placeholder="请输入名称"><button @click="showPopUpWindow">显示弹窗</button></li>
+            <li><input type="text" v-model="calendar.selectDay.date" placeholder="显示所选日期"><button @click="showCalendar()">显示日历</button></li>
+            <li><button @click="Bottomwindow.show = true">显示底部弹窗</button></li>
+        </ul>
+        <!-- 组件 -->
+        <my-loading :show="loadingShow"></my-loading>
+        <my-toast :show="toast.show" :msg="toast.msg"></my-toast>
+        <my-popwindow class="name-dialog" :item="popUpWindow" @updatefromchild="getTestText"></my-popwindow>
+        <my-calendar class="calendar-dialog" :fromfather="calendar"></my-calendar>
+		<my-bottomwindow :item="Bottomwindow" class="bottom-window"></my-bottomwindow>
+
+    </div>
+</body>
+<!-- 日期相关函数 -->
+<script src="js/calendar.js"></script>
+<!-- 子组件 -->
+<script src="js/child_element.js"></script>
+<!-- 页面js -->
+<script src="js/element.js"></script>
+
+</html>

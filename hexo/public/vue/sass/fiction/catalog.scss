@@ -1,0 +1,84 @@
+.btitle {
+    height: 0.842rem;
+    line-height: 0.842rem;
+    text-align: center;
+    font-size: 1.125em;
+    span {
+        font-size: 0.75em;
+        color: #666666;
+    }
+}
+
+.tab-menu {
+    margin-bottom: 0.395rem;
+    border: 0.026rem solid #eeeeee;
+    a {
+        float: left;
+        height: 1.053rem;
+        line-height: 1.053rem;
+        text-align: center;
+        font-size: 1em;
+        background-color: #eeeeee;
+        position: relative;
+    }
+    a.cur {
+        color: #e98100;
+        background-color: #ffffff;
+    }
+}
+
+.tab-menu.t2 a {
+    width: 50%;
+}
+
+.blist {
+    li {
+        position: relative;
+        border-bottom: 0.026rem dashed #dddddd;
+        padding: 0.263rem 0;
+    }
+    span {
+        height: 0.947rem;
+        line-height: 0.947rem;
+    }
+}
+
+.pages {
+    margin-top: 0.395rem;
+    text-align: center;
+    height: 1.053rem;
+    line-height: 1.053rem;
+    p {
+        font-size: 0.421rem;
+        position: relative;
+    }
+    span {
+        margin-right: 0.132rem;
+    }
+    a {
+        color: #333333;
+        background-color: #eeeeee;
+    }
+    .page_num {
+        .m_s {
+            width: 45%;
+            padding: 0.079rem 0.263rem;
+            border-radius: 0.105rem;
+            text-align: center;
+            font-size: 1.25em;
+        }
+    }
+    .page_prev {
+        position: absolute;
+        top: 0;
+        width: 70px;
+        height: 40px;
+    }
+    .page_next {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 40px;
+    }
+}
